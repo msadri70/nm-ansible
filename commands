@@ -1,0 +1,6 @@
+ansible <hosts> [-m <module_name>] -a <"arguments"> -u <username> [--become]
+
+ansible all -m ping -i hosts
+ansible all -a uptime -i hosts
+ansible all -m shell -a "uname -a" -i hosts
+ansible all -m command -a lscpu -i hosts
