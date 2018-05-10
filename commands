@@ -4,6 +4,9 @@ ansible all -m ping -i hosts
 ansible all -a uptime -i hosts
 ansible all -m shell -a "uname -a" -i hosts
 ansible all -m command -a lscpu -i hosts
+<<<<<<< HEAD
 
 
 ansible web -m user -a 'name=user1 password=somepassword' -b -K -i hosts
+=======
+>>>>>>> 288ad050f20cf2b8da3cc5ec6f34b8f0032c23a6
