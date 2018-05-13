@@ -1,0 +1,15 @@
+---
+- name: Configure ufw for limiting connections
+  hosts: web
+  tasks:
+    - name: Set firewall default policy
+      ufw: state=enabled policy=reject
+    - name: allow ssh 
+      ufw:  
+        rule: allow  
+        name: OpenSSH
+    - name: Allow all access to tcp port 80
+      ufw:
+        rule: allow
+        port: 80
+        proto: tcp
